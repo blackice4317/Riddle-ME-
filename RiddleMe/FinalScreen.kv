@@ -1,0 +1,67 @@
+MDScreen:
+    name:"FinalScreen"
+    on_enter:
+        app.anim2(congratulation)
+    MDFloatLayout:
+        FitImage:
+            source: "Assets/BG2.png"
+        Image:
+            id: congratulation
+            source: "Assets/questonBG.png"
+            pos_hint: {'center_y': 0.8}
+
+        MDLabel:
+            text: "Well done!"
+            pos_hint:{'center_y': 0.83}
+            theme_text_color:"Custom"
+            text_color: 0,14/255,33/255,1
+            halign: "center"
+            font_size: "30dp"
+            font_name: "cartoon"
+
+        MDLabel:
+            id: correct
+            text: "correct : "
+            text_color: 1,1,1,1
+            theme_text_color: "Custom"
+            font_size: "20dp"
+            font_name: "cartoon"
+            size_hint: .5 , .1
+            pos_hint: {'center_x': 0.5 , 'center_y': 0.6}
+
+        MDLabel:
+            id: wrong
+            text: "wrong :"
+            font_size: "20dp"
+            text_color: 1,1,1,1
+            theme_text_color: "Custom"
+            font_name: "cartoon"
+            size_hint: .5 , .1
+            pos_hint: {'center_x': 0.5 , 'center_y': 0.5}
+
+        MDLabel:
+            id: skipped
+            text: "skipped :"
+            font_size: "20dp"
+            text_color: 1,1,1,1
+            theme_text_color: "Custom"
+            font_name: "cartoon"
+            size_hint: .5 , .1
+            pos_hint: {'center_x': 0.5 , 'center_y': 0.4}
+
+        Button:
+            text: "Replay"
+            font_size: "20dp"
+            font_name: "cartoon"
+            size_hint: .4 , .1
+            pos_hint: {'center_x': 0.5 , 'center_y': 0.1}
+            background_color: 0,0,0,0
+            on_press:
+                app.begin_btn()
+            canvas.before:
+                Color:
+                    rgba: 0,14/255,33/255,1
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius:[20]

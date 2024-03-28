@@ -1,0 +1,43 @@
+MDScreen:
+    name:"Instruction"
+    MDFloatLayout:
+        FitImage:
+            source: "Assets/BG2.png"
+        Image:
+            source: "Assets/Instructions.png"
+            pos_hint: {'center_y': 0.8}
+
+        MDLabel:
+            text: "Over a hundred brain racking\n wonderful, and super hard riddles\n waiting to be answered,\n all you have to do is \n type in your answer and \n hit the submit button"
+            pos_hint:{'center_y': 0.5}
+            theme_text_color:"Custom"
+            text_color: 0,1,1,1
+            halign: "center"
+            font_size: "20dp"
+            font_name: "cartoon"
+
+        MDLabel:
+            text: "best of luck!"
+            pos_hint:{'center_y': 0.2}
+            theme_text_color:"Custom"
+            text_color: 0,1,1,1
+            halign: "center"
+            font_size: "30dp"
+            font_name: "cartoon"
+
+        Button:
+            text: "Begin"
+            font_size: "20dp"
+            font_name: "cartoon"
+            size_hint: .4 , .1
+            pos_hint: {'center_x': 0.5 , 'center_y': 0.1}
+            background_color: 0,0,0,0
+            on_press:
+                app.begin_btn()
+            canvas.before:
+                Color:
+                    rgba: 0,14/255,33/255,1
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius:[20]

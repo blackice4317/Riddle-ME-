@@ -1,0 +1,13 @@
+MDScreen:
+    name:"HomeScreen"
+    on_enter:
+        app.anim1(title)
+    MDFloatLayout:
+        md_bg_color:1,1,1,1
+        FitImage:
+            source: "Assets/BG.jpg"
+        Image:
+            id: title
+            source:"Assets/title.png"
+            pos_hint: {'center:x':0.5 , 'center_y':0.6}
+

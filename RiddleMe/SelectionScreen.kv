@@ -1,0 +1,51 @@
+MDScreen:
+    name:"Selection"
+    MDFloatLayout:
+        FitImage:
+            source: "Assets/BG2.png"
+        Image:
+            source: "Assets/QuestonBG.png"
+            pos_hint: {'center_y': 0.8 , 'center_x': 0.5}
+
+        MDLabel:
+            text: "W E L C O M E \n TO \n R I D D L E ME "
+            pos_hint:{'center_y': 0.82}
+            theme_text_color:"Custom"
+            text_color: 0,14/255,33/255,1
+            halign: "center"
+            font_size: "25dp"
+            font_name: "cartoon"
+
+        Button:
+            text: "Begin"
+            font_size: "20dp"
+            font_name: "cartoon"
+            size_hint: .4 , .1
+            pos_hint: {'center_x': 0.5 , 'center_y': 0.5}
+            background_color: 0,0,0,0
+            on_press:
+                app.begin_btn()
+            canvas.before:
+                Color:
+                    rgba: 0,14/255,33/255,1
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius:[20]
+
+        Button:
+            text: "Instruction"
+            font_size: "15dp"
+            font_name: "cartoon"
+            size_hint: .4 , .1
+            pos_hint: {'center_x': 0.5 , 'center_y': 0.38}
+            background_color: 0,0,0,0
+            on_press:
+                root.manager.current = "Instruction"
+            canvas.before:
+                Color:
+                    rgba: 0,14/255,33/255,1
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius:[20]

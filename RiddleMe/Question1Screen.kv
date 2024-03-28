@@ -1,0 +1,78 @@
+MDScreen:
+    name:"Question1"
+    MDFloatLayout:
+        FitImage:
+            source: "Assets/BG2.png"
+        Image:
+            id: bg1
+            source: "Assets/QuestonBG.png"
+            pos_hint:{'center_x': 0.5 , 'center_y': 0.65}
+
+        MDLabel:
+            id: counter
+            text: "3 :left"
+            color: 0,1,1,1
+            pos_hint:{'center_y': 0.88}
+            halign: "center"
+            font_size: "30dp"
+            font_name: "cartoon"
+
+        MDLabel:
+            id: questions_answered
+            text: "0"
+            color: 0,1,1,1
+            pos_hint:{'center_x': 0.55 , 'center_y': 0.95}
+            font_size: "30dp"
+            font_name: "cartoon"
+
+        MDLabel:
+            id: riddle1
+            text: " "
+            pos_hint:{'center_y': 0.69}
+            halign: "center"
+            font_size: "15dp"
+            font_name: "cartoon"
+
+        MDTextField:
+            id: answer1
+            font_name: "cartoon"
+            font_size: "20dp"
+            color: 1,1,1,1
+            size_hint: .5, .1
+            hint_text: "Answer"
+            pos_hint: {'center_x': 0.5 , 'center_y': 0.35}
+            multiline: False
+
+        Button:
+            text: "Submit"
+            font_size: "20dp"
+            font_name: "cartoon"
+            size_hint: .3 , .05
+            pos_hint: {'center_x': 0.5 , 'center_y': 0.22}
+            background_color: 0,0,0,0
+            on_press:
+                app.checker1()
+            canvas.before:
+                Color:
+                    rgba: 0,1,1,1
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius:[20]
+
+        Button:
+            text: "Next"
+            font_size: "20dp"
+            font_name: "cartoon"
+            size_hint: .3 , .05
+            pos_hint: {'center_x': 0.5 , 'center_y': 0.15}
+            background_color: 0,0,0,0
+            on_press:
+                app.next_btn1()
+            canvas.before:
+                Color:
+                    rgba: 0,1,1,1
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius:[20]
